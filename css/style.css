@@ -148,6 +148,6 @@ p {
         width: 20vw;
     }
     .container {
-        padding: 5vh 20vw;
+        padding: 5vh 2vw 0 20vw;
     }
 }
