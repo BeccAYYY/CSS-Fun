@@ -26,80 +26,93 @@ input[type=radio] {
     background-color: #a1c8e9;
     box-shadow: inset 0px -10px 5px -10px rgba(0, 0, 0, 0.603);
 }
+
 #page2-div {
     background-color: #bcdfc9;
     box-shadow: inset 0px -10px 5px -10px rgba(0, 0, 0, 0.603);
 }
+
 #page3-div {
     background-color: #f6c2d9;
     box-shadow: inset 0px -10px 5px -10px rgba(0, 0, 0, 0.603);
 }
+
 #page4-div {
     background-color: #fff69b;
     height: 82vh;
     z-index: -1;
 }
 
-#page1:checked ~ #page1-div {
-    height: 82vh;
-}
-#page2:checked ~ #page2-div {
-    height: 82vh;
-}
-#page3:checked ~ #page3-div {
+/*Conditions for making the pages collapse/appear*/
+#page1:checked~#page1-div {
     height: 82vh;
 }
 
-#page1:checked ~ .page-dots label[for="page4"] .bi-chevron-down, 
-#page1:checked ~ .page-dots label[for="page3"] .bi-chevron-down, 
-#page1:checked ~ .page-dots .bi-chevron-up, 
-#page2:checked ~ .page-dots label[for="page4"] .bi-chevron-down, 
-#page2:checked ~ .page-dots label[for="page2"] .bi-chevron-down, 
-#page2:checked ~ .page-dots label[for="page2"] .bi-chevron-up, 
-#page2:checked ~ .page-dots label[for="page3"] .bi-chevron-up, 
-#page3:checked ~ .page-dots label[for="page2"] .bi-chevron-down, 
-#page3:checked ~ .page-dots label[for="page3"] .bi-chevron-down, 
-#page3:checked ~ .page-dots label[for="page1"] .bi-chevron-up, 
-#page3:checked ~ .page-dots label[for="page3"] .bi-chevron-up, 
-#page4:checked ~ .page-dots .bi-chevron-down, 
-#page4:checked ~ .page-dots label[for="page1"] .bi-chevron-up, 
-#page4:checked ~ .page-dots label[for="page2"] .bi-chevron-up {
+#page2:checked~#page2-div {
+    height: 82vh;
+}
+
+#page3:checked~#page3-div {
+    height: 82vh;
+}
+
+/*Conditions to make left menu up and down arrows functional*/
+#page1:checked~.page-dots label[for="page4"] .bi-chevron-down,
+#page1:checked~.page-dots label[for="page3"] .bi-chevron-down,
+#page1:checked~.page-dots .bi-chevron-up,
+#page2:checked~.page-dots label[for="page4"] .bi-chevron-down,
+#page2:checked~.page-dots label[for="page2"] .bi-chevron-down,
+#page2:checked~.page-dots label[for="page2"] .bi-chevron-up,
+#page2:checked~.page-dots label[for="page3"] .bi-chevron-up,
+#page3:checked~.page-dots label[for="page2"] .bi-chevron-down,
+#page3:checked~.page-dots label[for="page3"] .bi-chevron-down,
+#page3:checked~.page-dots label[for="page1"] .bi-chevron-up,
+#page3:checked~.page-dots label[for="page3"] .bi-chevron-up,
+#page4:checked~.page-dots .bi-chevron-down,
+#page4:checked~.page-dots label[for="page1"] .bi-chevron-up,
+#page4:checked~.page-dots label[for="page2"] .bi-chevron-up {
     display: none;
 }
 
-
-#page1:checked ~ .page-dots {
+/*Conditions to make the left menu center veritcall on each page*/
+#page1:checked~.page-dots {
     top: 16vh;
 }
-#page2:checked ~ .page-dots {
+
+#page2:checked~.page-dots {
     top: 22vh;
 }
-#page3:checked ~ .page-dots {
+
+#page3:checked~.page-dots {
     top: 28vh;
 }
-#page4:checked ~ .page-dots {
+
+#page4:checked~.page-dots {
     top: 34vh;
 }
 
-
-#page1:checked ~ .page-dots label:not([for="page1"]),
-#page2:checked ~ .page-dots label:not([for="page2"]),
-#page3:checked ~ .page-dots label:not([for="page3"]),
-#page4:checked ~ .page-dots label:not([for="page4"]) {
+/*Condtions to move not-selected dot in front of selected one, so they can be clicked easier (left menu)*/
+#page1:checked~.page-dots label:not([for="page1"]),
+#page2:checked~.page-dots label:not([for="page2"]),
+#page3:checked~.page-dots label:not([for="page3"]),
+#page4:checked~.page-dots label:not([for="page4"]) {
     z-index: 2;
 }
 
-#page1:checked ~ .page-dots label[for="page1"] .bi-dot,
-#page2:checked ~ .page-dots label[for="page2"] .bi-dot,
-#page3:checked ~ .page-dots label[for="page3"] .bi-dot,
-#page4:checked ~ .page-dots label[for="page4"] .bi-dot {
+/*Transformation to make dot for selected page expand*/
+#page1:checked~.page-dots label[for="page1"] .bi-dot,
+#page2:checked~.page-dots label[for="page2"] .bi-dot,
+#page3:checked~.page-dots label[for="page3"] .bi-dot,
+#page4:checked~.page-dots label[for="page4"] .bi-dot {
     opacity: 0.5;
     transform: scale(2);
 }
-#page1:checked ~ .page-div label[for="page1"],
-#page2:checked ~ .page-div label[for="page2"],
-#page3:checked ~ .page-div label[for="page3"],
-#page4:checked ~ .page-div label[for="page4"] {
+
+/*Making heading of selected page grow*/
+#page1:checked~.page-div label[for="page1"],
+#page2:checked~.page-div label[for="page2"],
+#page3:checked~.page-div label[for="page3"],
+#page4:checked~.page-div label[for="page4"] {
     transform: scale(1.5);
 }
 
@@ -116,7 +129,10 @@ input[type=radio] {
     font-family: 'Virgil';
     src: local('Virgil'), url(Virgil.woff2) format('woff2');
 }
-.h4, p {
+
+/*Change to Bootstrap class "h4"*/
+.h4,
+p {
     font-family: "Virgil";
 }
 
@@ -124,7 +140,8 @@ input[type=radio] {
     height: 72vh;
 }
 
-.bi-chevron-down:hover, .bi-chevron-up:hover {
+.bi-chevron-down:hover,
+.bi-chevron-up:hover {
     transform: scale(1.5);
 }
 
@@ -132,6 +149,7 @@ input[type=radio] {
     width: 10vw;
 }
 
+/*Changes to two bootstrap classes*/
 .container-fluid {
     padding: 0;
 }
@@ -144,6 +162,7 @@ p {
     margin-bottom: 0;
     padding-left: 1em;
 }
+
 .svg-logo {
     right: 10px;
     bottom: 10px;
@@ -153,11 +172,13 @@ p {
     .w-10 {
         width: 20vw;
     }
+
     .container {
         padding: 5vh 2vw 0 20vw;
     }
 }
 
-.page-div > label {
+/*Change to ensure page titles are clickable, despite relatively positioned parent on front page*/
+.page-div>label {
     z-index: 2;
 }
