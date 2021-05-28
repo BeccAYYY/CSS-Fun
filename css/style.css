@@ -126,21 +126,28 @@ input[type=radio] {
     transform: scale(1.5);
 }
 
-#x {
-    right: 1em;
-    top: 2em;
-    z-index: 2;
+.w-10 {
+    width: 10vw;
 }
 
-#screen-cover {
-    display: none;
-    position: absolute;
-    background-color: red;
-    height: 100vh;
-    width: 100vw;
-    z-index: 3;
+.container-fluid {
+    padding: 0;
 }
 
-#x:active ~ #screen-cover, #screen-cover:hover {
-    display: block;
+.container {
+    padding: 5vh 10vw;
+}
+
+p {
+    margin-bottom: 0;
+    padding-left: 1em;
+}
+
+@media screen and (max-width: 500px) {
+    .w-10 {
+        width: 20vw;
+    }
+    .container {
+        padding: 5vh 20vw;
+    }
 }
