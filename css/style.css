@@ -3,6 +3,7 @@ body {
     height: 100vh;
     overflow: hidden;
     position: relative;
+    z-index: 0;
 }
 
 input[type=radio] {
@@ -36,6 +37,7 @@ input[type=radio] {
 #page4-div {
     background-color: #fff69b;
     height: 82vh;
+    z-index: -1;
 }
 
 #page1:checked ~ #page1-div {
@@ -142,6 +144,10 @@ p {
     margin-bottom: 0;
     padding-left: 1em;
 }
+.svg-logo {
+    right: 10px;
+    bottom: 10px;
+}
 
 @media screen and (max-width: 500px) {
     .w-10 {
@@ -150,4 +156,8 @@ p {
     .container {
         padding: 5vh 2vw 0 20vw;
     }
+}
+
+.page-div > label {
+    z-index: 2;
 }
