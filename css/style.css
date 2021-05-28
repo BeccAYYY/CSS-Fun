@@ -126,14 +126,14 @@ input[type=radio] {
 }
 
 @font-face {
-    font-family: 'Virgil';
-    src: local('Virgil'), url(Virgil.woff2) format('woff2');
+    font-family: 'virgil';
+    src: local('virgil'), url(virgil.woff2) format('woff2');
 }
 
 /*Change to Bootstrap class "h4"*/
 .h4,
 p {
-    font-family: "Virgil";
+    font-family: "virgil";
 }
 
 .note-content {
